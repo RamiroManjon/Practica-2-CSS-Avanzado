@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindBox</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <!-- AQUÍ INICIAMOS EL HEADER, QUE VA A CONTENER EL LOGO Y EL/LOS MENÚS QUE DESARROLLEMOS -->
+    <header>
+        <!-- LOGO -->
+         <div class="logo">
+            <h1>MindBox</h1>
+        </div>
+
+        <!-- MAIN MENU -->
+         <nav class="main-menu">
+            <ul>
+                <li>
+                    <a class="selected" href="#">Inicio</a>
+                </li>
+                <li>
+                    <a href="tareas.html">Tareas</a>
+                </li>
+                <li>
+                    <a href="#">Notas</a>
+                </li>
+                <li>
+                    <a href="inspiracion.html">Inspiración</a>
+                </li>
+                <li>
+                    <a href="#">Configuración</a>
+                </li>
+            </ul>
+         </nav>
+
+         <!-- TOOL BAR -->
+          <nav class="tool-bar">
+            <span class="material-symbols-outlined">search</span>
+            <span class="material-symbols-outlined">notifications</span>
+            <span class="material-symbols-outlined">settings</span>
+            <span class="material-symbols-outlined">account_circle</span>
+            <span class="user-avatar"></span>
+          </nav>
+    </header>
+
+    <!-- AQUÍ COMIENZA EL MAIN, QUE ES DONDE VA A ESTAR CONTENIDO TODO EL CUERPO DE NUESTRA WEB -->
+    <main>
+        <!-- FIRST SECTION -->
+        <section class="firstSection">
+            <h2>Dashboard</h2>
+            <div class="firstSectionContent">
+                <!-- FIRST CARD -->
+                <article class="box">
+                    <h3>Tareas</h3>
+                    <div class="description">
+                        <p>Organiza tus tareas diarias con facilidad.</p>
+                        <a>Ver Tareas</a>
+                    </div>
+                </article>
+
+                <!-- SECOND CARD -->
+                <article class="box">
+                    <h3>Notas</h3>
+                    <div class="description">
+                        <p>Toma notas rápidas y accede a ellas en cualquier momento.</p>
+                        <a>Ver Notas</a>
+                    </div>
+                </article>
+
+                <!-- THIRD CARD -->
+                <article class="box">
+                    <h3>Inspiración</h3>
+                    <div class="description">
+                        <p>Encuentra inspiración para tus proyectos y tareas.</p>
+                        <a>Ver Inspiración</a>
+                    </div>
+                </article>
+
+                <!-- FOURTH CARD -->
+                <article class="box">
+                    <h3>Configuración</h3>
+                    <div class="description">
+                        <p>Personaliza la aplicación según tus preferencias.</p>
+                        <a>Ver Configuración</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECOND SECTION -->
+        <section class="secondSection">
+            <h2>Últimas inspiraciones</h2>
+            <div class="secondSectionContent">
+                <!-- FIRST CARD -->
+                <article class="card">
+                    <img src="files/img1.jpg" alt="Imagen Primera Tarjeta">
+                    <div class="inspirationDetails">
+                        <h3>Título de la Inspiración 1</h3>
+                        <p>Fecha: 01/07/2025</p>
+                        <p>Resumen de la inspiración 1.</p>
+                    </div>
+                </article>
+
+                <!-- SECOND CARD -->
+                <article class="card">
+                    <img src="files/img2.jpg" alt="Imagen Segunda Tarjeta">
+                    <div class="inspirationDetails">
+                        <h3>Título de la Inspiración 2</h3>
+                        <p>Fecha: 02/07/2025</p>
+                        <p>Resumen de la inspiración 2.</p>
+                    </div>
+                </article>
+
+                <!-- THIRD CARD -->
+                <article class="card">
+                    <img src="files/img3.jpg" alt="Imagen Tercera Tarjeta">
+                    <div class="inspirationDetails">
+                        <h3>Título de la Inspiración 3</h3>
+                        <p>Fecha: 03/07/2025</p>
+                        <p>Resumen de la inspiración 3.</p>
+                    </div>
+                </article>
+
+                <!-- FOURTH CARD -->
+                <article class="card">
+                    <img src="files/img4.jpg" alt="Imagen Cuarta Tarjeta">
+                    <div class="inspirationDetails">
+                        <h3>Título de la Inspiración 4</h3>
+                        <p>Fecha: 04/07/2025</p>
+                        <p>Resumen de la inspiración 4.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- AQUÍ COMIENZA EL FOOTER, LA ÚLTIMA SECCIÓN DE NUESTRA WEB -->
+    <footer>
+        <p>&copy; 2025 Mindbox. Todos los derechos reservados.</p>
+    </footer>
+    
+</body>
+</html>
