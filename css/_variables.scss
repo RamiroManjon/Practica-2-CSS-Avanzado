@@ -1,0 +1,23 @@
+$colors: (
+    main-color: #5f5f65,
+    menu-color: #4C5673,
+    main-blue: #6060f9,
+    main-bg: white,
+    light-bg: #F9F9F9,
+    shadow-color: #eaeaea,
+    big-box-color: aquamarine,
+    medium-box-color: lime,
+    small-box-color: lightgreen
+); 
+
+$fontSizes: (
+    bigFont: clamp(2rem, 4vw, 2.5rem),
+    mediumFont: clamp(1.8rem, 4vw, 2rem),
+    smallFont: clamp(1.5rem, 4vw, 1.8rem)
+);
+
+$cardSizes: (
+    bigCard: 100%,
+    mediumCard: calc(50% - 2rem),
+    smallCard: calc(33.3333% - 3rem)
+);

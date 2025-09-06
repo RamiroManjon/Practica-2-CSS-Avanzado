@@ -1,0 +1,37 @@
+@use 'variables';
+@use 'sass:map';
+
+@function getColor($name) {
+  @return map.get(variables.$colors, $name);
+}
+
+@function getFontSize($name) {
+    @return map.get(variables.$fontSizes, $name);
+}
+
+@function getCardSize($name) {
+    @return map.get(variables.$cardSizes, $name);
+}
+
+@mixin transitionSoft {
+  transition: all .4s ease;
+}
+
+@mixin bigBox{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: getColor(big-box-color);
+}
+
+@mixin mediumBox{
+    width: calc(50% - 2rem);
+    display: flex;
+    flex-direction: column;
+    background-color: getColor(medium-box-color);
+}
+
+@mixin smallBox{
+    width: calc(33.3333% - 3rem);
+    background-color: getColor(small-box-color);
+}

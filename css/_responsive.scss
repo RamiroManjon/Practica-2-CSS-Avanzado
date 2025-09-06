@@ -1,0 +1,30 @@
+@use 'mixins';
+
+@media (max-width: 700px){
+    .main-menu,
+    .tool-bar{
+        display: none !important;
+    }
+
+    .burger-menu{
+        display: block !important;
+    }
+
+    .firstSection .firstSectionContent .box{
+        @include mixins.mediumBox;
+    }
+
+    .card{
+        width: mixins.getCardSize(mediumCard) !important;
+    }
+}
+
+@media (max-width: 490px){
+    .firstSection .firstSectionContent .box{
+        @include mixins.bigBox;
+    }
+
+    .card{
+        width: mixins.getCardSize(bigCard) !important;
+    }
+}

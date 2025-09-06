@@ -1,0 +1,304 @@
+@use "sass:meta";
+@use 'variables';
+@use 'mixins';
+
+
+:root{
+    font-size: 10px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: mixins.getColor(light-bg);
+}
+
+h1, h2, h3{
+    font-weight: 600;
+}
+
+img{
+    width: 100%;
+}
+
+.selected{
+    color: mixins.getColor(main-blue) !important;
+    font-weight: 600;
+}
+
+/* HEADER */
+header{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: mixins.getColor(main-bg);
+
+    & .logo h1{
+        font-size: mixins.getFontSize(bigFont);
+        color: mixins.getColor(menu-color);
+    }
+
+    & .main-menu{
+        font-size: 1.4rem;
+
+        & ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            list-style-type: none;
+
+            & li:not(:last-child){
+                padding-right: 2rem;
+            }
+
+            & a{
+                color: mixins.getColor(menu-color);
+                text-decoration: none;
+                @include mixins.transitionSoft;
+            }
+
+            & a:hover{
+                opacity: .7;
+            }
+        }
+    }
+
+    & .tool-bar{
+        display: flex;
+        align-items: center;
+        color: mixins.getColor(menu-color);
+
+        & span{
+            cursor: pointer;
+            @include mixins.transitionSoft;
+        }
+
+        & span:not(:first-child){
+            margin-left: 1rem;
+        }
+
+        & span:hover{
+            opacity: .7;
+        }
+
+        & .user-avatar{
+            width: 3rem;
+            height: 3rem;
+            background-image: url(../images/avatar.jpeg);
+            background-size: cover;
+            background-position: center center;
+            border-radius: 50px;
+        }
+    }
+
+    & .burger-menu{
+        width: 3rem;
+        height: 3rem;
+        display: none;
+    }
+}
+
+/* MAIN */
+main{
+    padding: 2rem;
+}
+
+.firstSection{
+    display: flex;
+    flex-direction: column;
+
+    & h2{
+        font-weight: 600;
+        font-size: mixins.getFontSize(mediumFont);
+        margin-top: 3rem;
+    }
+
+    & .firstSectionContent{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4rem;
+        margin-top: 2rem;
+
+        & .box{
+            padding: 2rem;
+            border-radius: 1.5rem;
+            box-shadow: -1px 4px 5px 1px mixins.getColor(shadow-color);
+            justify-content: space-between;
+            gap: 3rem;
+            @include mixins.smallBox;
+
+            & h3{
+                font-size: 2.2rem;
+                font-weight: 600;
+            }
+
+            & .description{
+                display: flex;
+                flex-direction: column;
+
+                & p{
+                    font-size: mixins.getFontSize(smallFont);
+                    color: var(--menu-color);
+                    margin-bottom: 2rem;
+                }
+
+                & a{
+                    font-size: mixins.getFontSize(smallFont);
+                    color: mixins.getColor(main-bg);
+                    background-color: mixins.getColor(main-blue);
+                    padding: 1rem 2rem;
+                    border-radius: .5rem;
+                    cursor: pointer;
+                    max-width: max-content;
+                    @include mixins.transitionSoft;
+                }
+
+                & a:hover{
+                    opacity: .8;
+                }
+            }
+        }
+    }
+}
+
+.secondSection{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4rem;
+
+    & h2{
+        font-weight: 600;
+        font-size: mixins.getFontSize(mediumFont);
+        margin-top: 10rem;
+    }
+
+    & .secondSectionContent{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+        gap: 4rem;
+
+        & .card{
+            width: mixins.getCardSize(smallCard);
+            background-color: mixins.getColor(main-bg);
+            border-radius: 1.5rem;
+            box-shadow: -1px 4px 5px 1px mixins.getColor(shadow-color);
+            overflow: hidden;
+
+            & .inspirationDetails{
+                display: flex;
+                flex-direction: column;
+                padding: 2rem;
+                gap: 3rem;
+
+                & h3{
+                    font-size: mixins.getFontSize(mediumFont);
+                    font-weight: 600;
+                }
+
+                & p{
+                    font-size: mixins.getFontSize(smallFont);;
+                    color: var(--menu-color);
+                }
+
+                & p:last-child{
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+/* INSPIRACIÓN FORM SECTION */
+.formSection{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    & h2{
+        font-weight: 600;
+        font: mixins.getFontSize(mediumFont);
+        margin-top: 5rem;
+    }
+
+    & form{
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        padding: 3rem;
+        background-color: var(--main-bg);
+        border-radius: 1.5rem;
+        box-shadow: -1px 4px 5px 1px var(--shadow-color);
+
+        .form-row{
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+
+            & label{
+                font-size: 1.8rem;
+                color: var(--menu-color);
+            }
+
+            & input, textarea{
+                background-color: var(--light-bg);
+                border: 1px solid var(--light-bg);
+                border-radius: 1rem;
+                padding: 1.5rem 1rem;
+                font-size: 1.6rem;
+                @include mixins.transitionSoft;
+                color: var(--menu-color);
+            }
+
+            & textarea{
+                height: 20rem;
+                resize: vertical;
+            }
+
+            & input:focus, textarea:focus{
+                background-color: var(--main-bg);
+                border: 1px solid mixins.getColor(main-blue);
+                outline: none;
+            }
+        }
+
+        & button{
+            font-size: 1.6rem;
+            color: var(--main-bg);
+            background-color: mixins.getColor(main-blue);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: .5rem;
+            cursor: pointer;
+            max-width: max-content;
+            @include mixins.transitionSoft;
+        }
+
+        & button:hover{
+            opacity: .7;
+        }
+
+    }
+}
+
+/* FOOTER */
+footer{
+    text-align: center;
+    background-color: mixins.getColor(main-blue);
+    color: mixins.getColor(main-bg);
+    font-size: mixins.getFontSize(smallFont);
+    padding: 2.5rem 0;
+}
+
+@include meta.load-css('responsive');
+
+
